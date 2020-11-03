@@ -18,7 +18,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Map;
 import java.util.UUID;
-
 @Controller
 public class MainController {
     @Autowired
@@ -46,6 +45,11 @@ public class MainController {
         model.addAttribute("filter", filter);
 
         return "main";
+    }
+
+    @GetMapping("/sendMessage")
+    public String sendMessage(Map<String, Object> model) {
+        return "userList";
     }
 
     @PostMapping("/main")
@@ -89,5 +93,6 @@ public class MainController {
         model.addAttribute("messages", messages);
 
         return "main";
+
     }
 }

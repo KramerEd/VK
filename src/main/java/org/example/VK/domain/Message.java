@@ -1,7 +1,6 @@
 package org.example.VK.domain;
 
 import org.hibernate.validator.constraints.Length;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 

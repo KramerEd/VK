@@ -34,3 +34,8 @@
 .box .inputBox input:valid ~ label{
 	top: 25px;
 }
+.bb
+{
+margin-left:auto;
+margin-right:auto;
+}

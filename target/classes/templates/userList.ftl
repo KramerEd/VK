@@ -4,14 +4,14 @@
     List of users
 
     <table>
-        <thead>
+        <head>
         <tr>
             <th>Name</th>
             <th>Role</th>
             <th></th>
         </tr>
-        </thead>
-        <tbody>
+        </head>
+        <body>
         <#list users as user>
             <tr>
                 <td>${user.username}</td>
@@ -19,6 +19,6 @@
                 <td><a href="/user/${user.id}">edit</a></td>
             </tr>
         </#list>
-        </tbody>
+        </body>
     </table>
 </@c.page>

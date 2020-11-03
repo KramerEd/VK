@@ -85,8 +85,8 @@ public class UserService implements UserDetailsService {
         user.setUsername(username);
 
         Set<String> roles = Arrays.stream(Role.values())
-                .map(Role::name)
-                .collect(Collectors.toSet());
+                 .map(Role::name)
+                 .collect(Collectors.toSet());
 
         user.getRoles().clear();
 
@@ -95,8 +95,6 @@ public class UserService implements UserDetailsService {
                 user.getRoles().add(Role.valueOf(key));
             }
         }
-
-        userRepo.save(user);
     }
     public void updateProfile(User user, String password, String email){
         String userEmail = user.getEmail();
@@ -119,7 +117,5 @@ public class UserService implements UserDetailsService {
         if(isEmailChanged){
             sendMessage(user);
         }
-
-        sendMessage(user);
     }
 }

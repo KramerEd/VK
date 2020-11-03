@@ -19,7 +19,6 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @PreAuthorize("hasAuthority('ADMIN')")
     @GetMapping
     public String userList(Model model) {
         model.addAttribute("users", userService.findAll());
